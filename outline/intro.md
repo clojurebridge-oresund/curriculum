@@ -187,10 +187,8 @@ Look at the last line, and see how we can use symbols by themselves to refer to 
 
 ### EXERCISE: Basic arithmetic
 
-Take your height in feet and inches and convert it to inches using arithmetic in Clojure.
+Take your height in centimeters and convert it to inches using arithmetic in Clojure. There are 2.54 centimeters in an inch.
 
-Then convert that to centimeters. There are 2.54 centimeters in an inch.
+Then, ask two people near you for their height in inches. Find the average of your heights.
 
-Lastly, ask two people near you for their height in centimeters. Find the average of your heights.
-
-Bonus: Convert that average back to feet and inches. The feet and the inches will be separate numbers. `(quot x y)` will give you the whole number part when dividing two numbers. `(mod x y)` will give you the remainder when dividing two numbers.
+Bonus: Convert that average to feet and inches. For example: 5 feet and 4 inches. Remember, there are 12 inches in a foot. The feet and the inches will be separate numbers. `(quot x y)` will give you the whole number part when dividing two numbers. `(mod x y)` will give you the remainder when dividing two numbers.
