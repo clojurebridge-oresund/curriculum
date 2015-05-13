@@ -7,8 +7,8 @@ More Data Structures
 ## Keywords
 
 ```clj
-:first  
-:last
+:firstname  
+:lastname
 ```
 
 Keywords are the strangest of the basic value types, because they don't have a real world analog like numbers, strings, and booleans do. You can think of them as a special type of string, one that's used for labels. They are often used as keys for maps.
@@ -23,7 +23,7 @@ Maps hold a set of keys and values associated with them. You can think of it lik
 We write maps by enclosing alternating keys and values in curly braces, like so:
 
 ```clj
-{:first "Sally" :last "Brown"}
+{:firstname "Sally" :lastname "Brown"}
 {:a 1 :b "two"}
 {}
 ```
@@ -34,13 +34,13 @@ Let's look at some functions we can use with maps. We don't have nearly as many 
 
 
 ```clj
-(map? {:first "Sally" :last "Brown"})
+(map? {:firstname "Sally" :lastname "Brown"})
 ;=> true
 
-(get {:first "Sally" :last "Brown"} :first)
+(get {:firstname "Sally" :lastname "Brown"} :firstname)
 ;=> "Sally"
 
-(get {:first "Sally"} :last :MISS)
+(get {:firstname "Sally"} :lastname :MISS)
 ;=> :MISS
 ```
 
@@ -49,14 +49,14 @@ Let's look at some functions we can use with maps. We don't have nearly as many 
 `get` works a lot like `nth` did with vectors, but takes a key instead of a number. It uses the supplied key to look up a value in the map. What do you think is happening with the second example of `get`? We can supply a value for `get` to return if it can't find the key we asked for. In this case, we supplied the key `:MISS`.
 
 ```clj
-(assoc {:first "Sally"} :last "Brown")
-;=> {:first "Sally", :last "Brown"}
+(assoc {:firstname "Sally"} :lastname "Brown")
+;=> {:firstname "Sally", :lastname "Brown"}
 
-(dissoc {:first "Sally" :last "Brown"} :last)
-;=> {:first "Sally"}
+(dissoc {:firstname "Sally" :lastname "Brown"} :lastname)
+;=> {:firstname "Sally"}
 
-(merge {:first "Sally"} {:last "Brown"})
-;=> {:first "Sally" :last "Brown"}
+(merge {:firstname "Sally"} {:lastname "Brown"})
+;=> {:firstname "Sally" :lastname "Brown"}
 ```
 
 `assoc` and `dissoc` are paired functions: they associate and disassociate items from a map. See how we add the last name "Brown" to the map with `assoc`, and then we remove it with `dissoc`. 
@@ -65,31 +65,31 @@ Let's look at some functions we can use with maps. We don't have nearly as many 
 
 
 ```clj
-(count {:first "Sally" :last "Brown"})
+(count {:firstname "Sally" :lastname "Brown"})
 ;=> 2
 ```
 
 `count`, every collection has this function. Why do you think the answer is two? `count` is returning the number of associations.
 
 ```clj
-(keys {:first "Sally" :last "Brown"})
-;=> (:first :last)
+(keys {:firstname "Sally" :lastname "Brown"})
+;=> (:firstname :lastname)
 
-(vals {:first "Sally" :last "Brown"})
+(vals {:firstname "Sally" :lastname "Brown"})
 ;=> ("Sally" "Brown")
 ```
 
-Then we have `keys` and `vals`, which are pretty simple: they return the keys and values in the map. The order is not guaranteed, so we could have gotten `(:first :last)` or `(:last :first)`.
+Then we have `keys` and `vals`, which are pretty simple: they return the keys and values in the map. The order is not guaranteed, so we could have gotten `(:firstname :lastname)` or `(:lastname :firstname)`.
 
 
 Let's look at one more thing about maps before we move on. You can always use `get` to get values out of maps, but you'll more often see something like the following:
 
 ```clj
-(:first {:first "Sally" :last "Brown"})
+(:firstname {:firstname "Sally" :lastname "Brown"})
 => "Sally"
-(:last {:first "Sally"})
+(:lastname {:firstname "Sally"})
 => nil
-(:last {:first "Sally"} :MISS)
+(:lastname {:firstname "Sally"} :MISS)
 => :MISS
 ```
 
@@ -102,24 +102,24 @@ Simple values such as numbers, keywords, and strings are not the only types of t
 Vector of Maps
 
 ```clj
-(def friends [{:first "Bob"}{:first "Jane"}])
+(def friends [{:firstname "Bob"}{:firstname "Jane"}])
 
 (first friends)
-=> {:first "Bob"}
+=> {:firstname "Bob"}
 ```
 
 Map of Maps
 
 ```clj
-(def family {:brother {:first "Matt" :state "TX"}
-             :sister1 {:first "Susan" :state "TN"}
-             :sister2 {:first "Hannah" :state "IL"}})
+(def family {:brother {:firstname "Matt" :state "TX"}
+             :sister1 {:firstname "Susan" :state "TN"}
+             :sister2 {:firstname "Hannah" :state "IL"}})
 
-(get family :brother)  => {:first "Matt" :state "TX"}
-(:brother family)      => {:first "Matt" :state "TX"}
+(get family :brother)  => {:firstname "Matt" :state "TX"}
+(:brother family)      => {:firstname "Matt" :state "TX"}
 
-(get family :sister1)  => {:first "Susan" :state "TN"}
-(:sister1 family)      => {:first "Susan" :state "TN"}
+(get family :sister1)  => {:firstname "Susan" :state "TN"}
+(:sister1 family)      => {:firstname "Susan" :state "TN"}
 ```
 
 
@@ -135,10 +135,10 @@ Create a function called `get-names` that takes a vector of maps of people and r
 Here is an example of how it should work:
 
 ```clj
-(get-names [{:first "Margaret" :last "Atwood"}
-            {:first "Doris" :last "Lessing"}
-            {:first "Ursula" :last "Le Guin"}
-            {:first "Alice" :last "Munro"}])
+(get-names [{:firstname "Margaret" :lastname "Atwood"}
+            {:firstname "Doris" :lastname "Lessing"}
+            {:firstname "Ursula" :lastname "Le Guin"}
+            {:firstname "Alice" :lastname "Munro"}])
 
 ;=> ["Margaret Atwood" "Doris Lessing" "Ursula Le Guin" "Alice Munro"]
 ```

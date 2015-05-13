@@ -32,7 +32,7 @@
 
         <section>
           <h3 class="slide-title slide">Maps</h3>
-          <pre><code class="language-clojure">{:first "Sally", :last "Brown", :job "programmer"}
+          <pre><code class="language-clojure">{:firstname "Sally", :lastname "Brown", :job "programmer"}
 {:a 1, :b "two"}
 {}</code></pre>
 
@@ -44,50 +44,50 @@
 
         <section>
           <h3 class="slide-title slide">Map functions</h3>
-          <pre><code class="language-clojure">(map? {:first "Sally" :last "Brown"})
+          <pre><code class="language-clojure">(map? {:firstname "Sally" :lastname "Brown"})
 ;;=&gt; true
 
-(get {:first "Sally" :last "Brown"} :first)
+(get {:firstname "Sally" :lastname "Brown"} :firstname)
 ;;=&gt; "Sally"
 
-(get {:first "Sally"} :last :MISS)
+(get {:firstname "Sally"} :lastname :MISS)
 ;;=&gt; :MISS</code></pre>
         </section>
 
         <section>
           <h3 class="slide-title slide">More map functions</h3>
-          <pre><code class="language-clojure">(assoc {:first "Sally"} :last "Brown")
-;;=&gt; {:first "Sally", :last "Brown"}
+          <pre><code class="language-clojure">(assoc {:firstname "Sally"} :lastname "Brown")
+;;=&gt; {:firstname "Sally", :lastname "Brown"}
 
-(dissoc {:first "Sally" :last "Brown"} :last)
-;;=&gt; {:first "Sally"}
+(dissoc {:firstname "Sally" :lastname "Brown"} :lastname)
+;;=&gt; {:firstname "Sally"}
 
-(merge {:first "Sally"} {:last "Brown"})
-;;=&gt; {:first "Sally", :last "Brown"}
+(merge {:firstname "Sally"} {:lastname "Brown"})
+;;=&gt; {:firstname "Sally", :lastname "Brown"}
 
-(count {:first "Sally" :last "Brown"})
+(count {:firstname "Sally" :lastname "Brown"})
 ;;=&gt; 2</code></pre>
         </section>
 
         <section>
           <h3 class="slide-title slide">Even more map
           functions</h3>
-          <pre><code class="language-clojure">(keys {:first "Sally" :last "Brown"})
-;;=&gt; (:first :last)
+          <pre><code class="language-clojure">(keys {:firstname "Sally" :lastname "Brown"})
+;;=&gt; (:firstname :lastname)
 
-(vals {:first "Sally" :last "Brown"})
+(vals {:firstname "Sally" :lastname "Brown"})
 ;;=&gt; ("Sally" "Brown")</code></pre>
         </section>
 
         <section>
           <h3 class="slide-title slide">Maps and keywords</h3>
-          <pre><code class="language-clojure">(:first {:first "Sally" :last "Brown"})
+          <pre><code class="language-clojure">(:firstname {:firstname "Sally" :lastname "Brown"})
 ;;=&gt; "Sally"
 
-(:last {:first "Sally"})
+(:lastname {:firstname "Sally"})
 ;;=&gt; nil
 
-(:last {:first "Sally"} :MISS)
+(:lastname {:firstname "Sally"} :MISS)
 ;;=&gt; :MISS</code></pre>
         </section>
 
@@ -121,10 +121,10 @@
             takes a vector of maps of people and returns a vector
             of their names.
           </div>
-          <pre><code class="language-clojure">(get-names [{:first "Margaret" :last "Atwood"}
-            {:first "Doris" :last "Lessing"}
-            {:first "Ursula" :last "Le Guin"}
-            {:first "Alice" :last "Munro"}])
+          <pre><code class="language-clojure">(get-names [{:firstname "Margaret" :lastname "Atwood"}
+            {:firstname "Doris" :lastname "Lessing"}
+            {:firstname "Ursula" :lastname "Le Guin"}
+            {:firstname "Alice" :lastname "Munro"}])
 
 ;;=&gt; ["Margaret Atwood" "Doris Lessing"
 ;;    "Ursula Le Guin" "Alice Munro"]</code></pre>
