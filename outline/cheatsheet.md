@@ -36,7 +36,7 @@
 #### Creating a map
 
 ```clj
-{:first "Sally" :last "Brown"}
+{:firstname "Sally" :lastname "Brown"}
 {:a 1 :b "two"}
 {}
 ```
@@ -46,39 +46,39 @@
 
 ```clj
 ; determine if value is a map
-(map? {:first "Sally" :last "Brown"})
+(map? {:firstname "Sally" :lastname "Brown"})
 ;=> true
 
-; using keyword :first get the value
-(get {:first "Sally" :last "Brown"} :first)
+; using keyword :firstname get the value
+(get {:firstname "Sally" :lastname "Brown"} :firstname)
 ;=> "Sally"
 
-; using keyword :first get the value and return :MISS if key doesn't exist in map
-(get {:first "Sally"} :last :MISS)
+; using keyword :firstname get the value and return :MISS if key doesn't exist in map
+(get {:firstname "Sally"} :lastname :MISS)
 ;=> :MISS
 
 ; add a key/value to the map
-(assoc {:first "Sally"} :last "Brown")
-;=> {:first "Sally", :last "Brown"}
+(assoc {:firstname "Sally"} :lastname "Brown")
+;=> {:firstname "Sally", :lastname "Brown"}
 
-; remove (disassociate) the key/value of :last
-(dissoc {:first "Sally" :last "Brown"} :last)
-;=> {:first "Sally"}
+; remove (disassociate) the key/value of :lastname
+(dissoc {:firstname "Sally" :lastname "Brown"} :lastname)
+;=> {:firstname "Sally"}
 
 ; merge two maps
-(merge {:first "Sally"} {:last "Brown"})
-;=> {:first "Sally", :last "Brown"}
+(merge {:firstname "Sally"} {:lastname "Brown"})
+;=> {:firstname "Sally", :lastname "Brown"}
 
 ; get number of key/value pairs in this map
-(count {:first "Sally" :last "Brown"})
+(count {:firstname "Sally" :lastname "Brown"})
 ;=> 2
 
 ; get all the keys in this map
-(keys {:first "Sally" :last "Brown"})
-;=> (:first :last)
+(keys {:firstname "Sally" :lastname "Brown"})
+;=> (:firstname :lastname)
 
 ; get all the values in this map
-(vals {:first "Sally" :last "Brown"})
+(vals {:firstname "Sally" :lastname "Brown"})
 ;=> ("Sally" "Brown")
 ```
 
@@ -115,8 +115,8 @@
 Assigning names to values inside of functions
 
 ```clj
-(let [first-name (:first-name user)            ; assign to `first-name`
-      message (str "Hello, " first-name "!")]  ; assign to `message`
+(let [firstname (:firstname user)              ; assign to `firstname`
+      message (str "Hello, " firstname "!")]   ; assign to `message`
   (println message))                           ; do something with `message`
 ```
 

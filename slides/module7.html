@@ -86,13 +86,13 @@
           formatting</h3>
 
           <p>Write a function <code>format-name</code> that takes a
-          map representing a user, with keys <code>:first</code>,
-          <code>:last</code>, and possibly <code>:middle</code>. It
+          map representing a user, with keys <code>:firstname</code>,
+          <code>:lastname</code>, and possibly <code>:middlename</code>. It
           should return their name as a string, like so:</p>
-          <pre><code class="language-clojure">(format-name {:first "Margaret" :last "Atwood"})
+          <pre><code class="language-clojure">(format-name {:firstname "Margaret" :lastname "Atwood"})
 ;;=&gt; "Margaret Atwood"
 
-(format-name {:first "Ursula" :last "Le Guin" :middle "K."})
+(format-name {:firstname "Ursula" :lastname "Le Guin" :middlename "K."})
 ;;=&gt; "Ursula K. Le Guin"</code></pre>
         </section>
 
@@ -102,7 +102,7 @@
 
           <p>Change <code>format-name</code> to take a second
           argument, <code>order</code>. If <code>order</code>
-          equals <code>:last</code>, then the format should be
+          equals <code>:lastname</code>, then the format should be
           "Last, First Middle"; otherwise, it should be "First
           Middle Last."</p>
         </section>

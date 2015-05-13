@@ -58,19 +58,19 @@ When testing the truth of an expression, Clojure considers the values `nil` and 
 
 ### EXERCISE: Even more name formatting
 
-Write a function `format-name` that takes a map representing a user, with keys `:first`, `:last`, and possibly `:middle`. It should return their name as a string, like so:
+Write a function `format-name` that takes a map representing a user, with keys `:firstname`, `:lastname`, and possibly `:middlename`. It should return their name as a string, like so:
 
 ```clj
-(format-name {:first "Margaret" :last "Atwood"})
+(format-name {:firstname "Margaret" :lastname "Atwood"})
 ;=> "Margaret Atwood"
 
-(format-name {:first "Ursula" :last "Le Guin" :middle "K."})
+(format-name {:firstname "Ursula" :lastname "Le Guin" :middlename "K."})
 ;=> "Ursula K. Le Guin"
 ```
 
 ### BONUS: Flexible name formatting
 
-Change `format-name` to take a second argument, `order`. If `order` equals `:last`, then the format should be "Last, First Middle"; otherwise, it should be "First Middle Last."
+Change `format-name` to take a second argument, `order`. If `order` equals `:lastname`, then the format should be "Last, First Middle"; otherwise, it should be "First Middle Last."
 
 
 ## Boolean logic with and, or, and not
