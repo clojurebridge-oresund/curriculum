@@ -21,7 +21,7 @@ Outline
 Supporting Materials
 --------------------
 * [Student Cheatsheet](outline/cheatsheet.md) | [PDF](ClojureBridgeCheatsheet-v1.pdf)
-* [Slides Helsingborg 2015-05-30](http://clojurebridge-oresund.github.io/curriculum/2015-05-29)
+* [Slides Helsingborg 2015-05-30](http://clojurebridge-oresund.github.io/curriculum/2015-05-30)
 * [Old global-growth web app](https://github.com/ClojureBridge/global-growth/blob/master/README.md)
 * [Further Reading](background-reading.md)
 
