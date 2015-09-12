@@ -1,0 +1,6 @@
+.emphasized-code code[class*=language-] {
+  color: #aaa;
+}
+.emphasized-code strong {
+  color: #000;
+}

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/mozilla-theme.css" id=
   "theme">
   <link rel="stylesheet" href="assets/prism.css">
+  <link rel="stylesheet" href="assets/main.css">
   <script src="assets/prism.js"></script>
   <script src="assets/prism.clojure.js"></script>
 </head>
@@ -23,7 +24,7 @@
 
         <section>
           <h2 class="slide-title chapter">Functions</h2>
-        
+
           <div style="float: center;"><img src="img/functions.jpg"></div>
         </section>
 
@@ -52,11 +53,41 @@
         </section>
 
         <section>
+          <pre><code class="language-clojure">(defn function-name
+  [argument-1 argument-2 ...]
+  body)</code></pre>
+        </section>
+
+        <section class="emphasized-code">
+          <pre class="language-text"><code class="language-text">(<strong>defn</strong> function-name
+  [argument-1 argument-2 ...]
+  body)</code></pre>
+        </section>
+
+        <section class="emphasized-code">
+          <pre class="language-text"><code class="language-text">(defn <strong>function-name</strong>
+  [argument-1 argument-2 ...]
+  body)</code></pre>
+        </section>
+
+        <section class="emphasized-code">
+          <pre class="language-text"><code class="language-text">(defn function-name
+  <strong>[argument-1 argument-2 ...]</strong>
+  body)</code></pre>
+        </section>
+
+        <section class="emphasized-code">
+          <pre class="language-text"><code class="language-text">(defn function-name
+  [argument-1 argument-2 ...]
+  <strong>body</strong>)</code></pre>
+        </section>
+
+        <section>
           <h3 class="slide-title slide">An example function</h3>
           <pre><code class="language-clojure">(defn total-bill
   "Given subtotal of bill, return total after tax."
   [subtotal]
-  (* 1.08 subtotal)) 
+  (* 1.08 subtotal))
 
 (total-bill 8.5)  ;=&gt; 9.18
 (total-bill 50)   ;=&gt; 54.0
@@ -67,10 +98,10 @@
           <h3 class="slide-title slide">An example function</h3>
           <pre><code class="language-clojure">(defn ; specifies that we are defining a function
   total-bill ; the name of this function
-  
+
   ;; documentation, optional
   "Given subtotal of bill, return total..."
-  
+
   [subtotal] ; list of arguments
 
   ;; body of function
@@ -202,6 +233,7 @@
   <script>
 Reveal.initialize({
     history: true,
+    transition: 'none',
     dependencies: [
     {src: "assets/reveal.js/plugin/markdown/marked.js"},
     {src: "assets/reveal.js/plugin/markdown/markdown.js"},
