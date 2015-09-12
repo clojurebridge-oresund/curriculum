@@ -19,7 +19,33 @@ A _function_ is an independent, discrete piece of code that takes in some values
   body)
 ```
 
-Let's see an example of creating a function:
+### A function without arguments
+
+```clj
+(defn get-name
+  ; no arguments
+  []
+  ; function body, a simple value
+  "Abraham Lincoln")
+
+(get-name)  ;=&gt; "Abraham Lincoln"
+```
+
+### EXERCISE: Create your first function
+
+Create a function called **give-back** that takes one argument and returns it.
+Whatever you call this function with you should get that same value back.
+
+When you have created the function you should be able to do these function
+calls:
+
+```clj
+(give-back 9000) ;=> 9000
+(give-back 3.1415) ;=> 3.1415
+(give-back "My money!") ;=> "My money!"
+```
+
+### A more advanced function
 
 ```clj
 (defn total-bill

@@ -62,28 +62,54 @@
           <pre class="language-text"><code class="language-text">(<strong>defn</strong> function-name
   [argument-1 argument-2 ...]
   body)</code></pre>
+          <p>Use <em>defn</em> to create a function.</p>
         </section>
 
         <section class="emphasized-code">
           <pre class="language-text"><code class="language-text">(defn <strong>function-name</strong>
   [argument-1 argument-2 ...]
   body)</code></pre>
+          <p>Call your function something.</p>
         </section>
 
         <section class="emphasized-code">
           <pre class="language-text"><code class="language-text">(defn function-name
   <strong>[argument-1 argument-2 ...]</strong>
   body)</code></pre>
+          <p>List the function arguments.</p>
         </section>
 
         <section class="emphasized-code">
           <pre class="language-text"><code class="language-text">(defn function-name
   [argument-1 argument-2 ...]
   <strong>body</strong>)</code></pre>
+          <p>Write a function body - the code that runs when you call the function.</p>
         </section>
 
         <section>
-          <h3 class="slide-title slide">An example function</h3>
+          <h3 class="slide-title slide">A function without arguments</h3>
+          <pre><code class="language-clojure">(defn get-name
+  ; no arguments
+  []
+  ; function body, a simple value
+  "Abraham Lincoln")
+
+(get-name)  ;=&gt; "Abraham Lincoln"</code></pre>
+        </section>
+
+        <section>
+          <h3 class="slide-title slide">Exercise: Create your first function</h3>
+
+          <p>Create a function called <strong>give-back</strong> that takes one argument and returns it.</p>
+
+          <pre><code class="language-clojure">(give-back 9000) ;=> 9000
+(give-back 3.1415) ;=&gt; 3.1415
+(give-back "My money!") ;=&gt; "My money!"</code></pre>
+
+        </section>
+
+        <section>
+          <h3 class="slide-title slide">A more advanced function</h3>
           <pre><code class="language-clojure">(defn total-bill
   "Given subtotal of bill, return total after tax."
   [subtotal]
@@ -95,7 +121,7 @@
         </section>
 
         <section>
-          <h3 class="slide-title slide">An example function</h3>
+          <h3 class="slide-title slide">A more advanced function</h3>
           <pre><code class="language-clojure">(defn ; specifies that we are defining a function
   total-bill ; the name of this function
 
