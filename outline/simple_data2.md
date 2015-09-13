@@ -1,14 +1,14 @@
 More Simple Values
 ========================================
 
-* Simple values
+* Simple data
     - Strings
     - Booleans and nil
     - Keywords
 
-## Simple values
+## Simple data
 
-We have already seen simple values that are numbers.  Now we will take a closer look at simple values that are strings, booleans, and keywords.
+We have already seen simple data that are numbers.  Now we will take a closer look at simple data that are strings, booleans, and keywords.
 
 ### Strings and characters
 
