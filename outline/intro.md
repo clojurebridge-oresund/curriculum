@@ -5,9 +5,9 @@ Introduction to Programming with Clojure
 * What is Clojure good at?
 * What does Clojure look like?
 * What is a REPL?
-* Simple values
+* Simple data
     - Numbers
-* Assigning names to values
+* Assigning names to data
 
 ## Why Clojure?
 
@@ -73,9 +73,9 @@ After you hit enter, a blank new page will open. At the bottom of Light Table, y
 
 Once that's done, let's try out the REPL together! Type `(+ 2 3)` and see what happens. Did you see the result appearing beside what you were typing? Once you've done that, hit enter and type `(max 8 17 2)`. You might see an error in red while typing. This happens because Light Table is continually evaluating what you are typing, and before you finish, the code might not be valid.
 
-## Simple values
+## Simple data
 
-In order to do anything in a programming language, you need to have values to do stuff with. In Clojure, simple values are numbers, strings, booleans, and keywords.
+In order to do anything in a programming language, you need to have data to do stuff with. In Clojure, simple data are numbers, strings, booleans, and keywords.
 
 ### Numbers
 
@@ -148,7 +148,7 @@ I used integers with all of the above, but we can use floats or ratios just fine
 
 ### Other simple value types
 
-Although we will look at these in more depth later, here are some examples of other types of simple values so that you may recognize them along the way in any code that you see. The following are examples of strings, keywords, and booleans:
+Although we will look at these in more depth later, here are some examples of other types of simple data so that you may recognize them along the way in any code that you see. The following are examples of strings, keywords, and booleans:
 
 ```clj
 ;; strings
@@ -165,9 +165,9 @@ true
 false
 ```
 
-## Assigning names to values
+## Assigning names to data
 
-If we had to type the same values over and over, it would be very hard to write a program. What we need are names for values, so we can refer to them in a way we can remember. We do that using `def`. Type the following into your instarepl:
+If we had to type the same data over and over, it would be very hard to write a program. What we need are names for data, so we can refer to them in a way we can remember. We do that using `def`. Type the following into your instarepl:
 
 ```clj
 (def mangoes 3)
@@ -175,7 +175,7 @@ If we had to type the same values over and over, it would be very hard to write 
 (+ mangoes oranges)
 ```
 
-When you assign a name to a value, that name is called a _symbol_. You can assign more than simple values to symbols. Try the following:
+When you assign a name to a value, that name is called a _symbol_. You can assign more than simple data to symbols. Try the following:
 
 ```clj
 (def fruit (+ mangoes oranges))
