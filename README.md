@@ -7,7 +7,7 @@ Outline
 * [Introduction to Programming with Clojure](outline/intro.md)
 * [Data Structures](outline/data_structures.md)
 * [Functions](outline/functions.md)
-* [More Simple Values](outline/simple_values2.md)
+* [More Simple Data](outline/simple_data2.md)
 * [More Functions](outline/functions2.md)
 * [More Data Structures](outline/data_structures2.md)
 * [Flow Control](outline/flow_control.md)
